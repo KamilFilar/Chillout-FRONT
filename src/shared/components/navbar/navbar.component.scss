@@ -1,0 +1,96 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 5px rgb(0, 65, 100);
+  transition: 0.4s;
+
+  &__brand {
+    margin-left: 15px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: none;
+
+    &--text {
+      margin: 0;
+      font-family: "Pattaya";
+      font-size: 40px;
+      letter-spacing: 2px;
+      color: white;
+      text-shadow: 0 0 10px rgb(0, 50, 77);
+      transition: 0.4s;
+
+      &:hover {
+        cursor: pointer;
+        text-shadow: 0 0 10px rgb(0, 80, 120);
+      }
+    }
+  }
+
+  &__items {
+    display: inherit;
+    gap: 25px;
+    margin-right: 15px;
+  }
+
+  &__toggleBtn {
+    display: none;
+    margin: 0 15px 0 0;
+    padding: 0;
+    max-height: 30px;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 110, 170);
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      color: rgb(0, 150, 225);
+    }
+  }
+
+  &--bgColor {
+    background-color: white;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    transition: .4s;
+
+    &__toggleBtn {
+      display: block;
+    }
+
+    &__items {
+      display: none;
+    }
+
+    .showItems {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin: 5px auto;
+      animation: toggleAnimation 0.7s;
+    }
+  }
+
+
+}
+
+@keyframes toggleAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

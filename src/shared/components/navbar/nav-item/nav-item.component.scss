@@ -1,0 +1,13 @@
+.nav-item {
+  a {
+    text-decoration: none;
+    font-family: "Cambria", serif;
+    font-size: 22px;
+    color: rgb(0, 80, 120);
+    transition: 0.4s;
+
+    &:hover {
+      color: rgb(0, 150, 225);
+    }
+  }
+}

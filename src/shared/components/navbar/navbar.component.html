@@ -1,0 +1,17 @@
+<nav class="navbar">
+    <button class="navbar__brand" (click)="setLogoBehaviour()">
+        <p class="navbar__brand--text">Chillout</p>
+    </button>
+    <button class="navbar__toggleBtn" (click)="toggleNavItems()">
+        <fa-icon [icon]="faBars" class="fa-2x"></fa-icon>
+    </button>
+    <div class="navbar__items">
+        <app-nav-item
+            *ngFor="let item of itemsArray"
+            [text]="item"
+        >
+        </app-nav-item>
+    </div>
+</nav>
+
+
