@@ -1,5 +1,6 @@
 # Chillout-Project :palm_tree:
 > The repository contains frontend part of Chillout-Project app.
+> There is also a project template made in Figma in the repository (remember to cut out figma directory from root folder).
 
 ## :sparkles: Get started: 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
