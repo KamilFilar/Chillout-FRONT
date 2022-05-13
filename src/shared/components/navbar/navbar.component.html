@@ -1,0 +1,12 @@
+<nav class="navbar">
+    <button class="navbar__brand" (click)="setLogoBehaviour()">
+        <p class="navbar__brand--text">Chillout</p>
+    </button>
+    <div class="navbar__items">
+        <app-nav-item
+            *ngFor="let item of itemsArray"
+            [text]="item"
+        >
+        </app-nav-item>
+    </div>
+</nav>
