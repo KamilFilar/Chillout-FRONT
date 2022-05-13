@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -9,9 +10,11 @@ import { Router } from '@angular/router';
 
 export class NavbarComponent implements OnInit {
   
+  faBars = faBars;
+  toggleBtnState = false;
   itemsArray = [
     'O mnie',
-    'Shop',
+    'Sklep',
     'Blog',
     'YouTube'
   ];
@@ -32,17 +35,37 @@ export class NavbarComponent implements OnInit {
   }
 
   switchBackgroud() {
-    const elem = document.querySelector('.navbar');
+    const navbar = document.querySelector('.navbar');
 
     window.addEventListener('scroll', () => {
       let currentHeight = document.documentElement.scrollTop;
 
-      return currentHeight != 0
-        ? elem?.classList.add('navbar--color')
-        : elem?.classList.remove('navbar--color');
+      // if toggleBtnState is true -> do nothing with background color
+      if (currentHeight != 0 && this.toggleBtnState == false) {
+        navbar?.classList.add('navbar--bgColor');
+      }
+      else {
+        if (this.toggleBtnState == false) {
+          navbar?.classList.remove('navbar--bgColor');
+        }
+      }
     });
   }
 
+  toggleNavItems() {
+    const navbar = document.querySelector('.navbar');
+    const items = document.querySelector('.navbar__items');
+    const currentHeight = document.documentElement.scrollTop;
+    
+    this.toggleBtnState = !this.toggleBtnState; // change state of toggleBtn
+    items?.classList.toggle('showItems');
+
+    if (currentHeight == 0) {
+      navbar?.classList.toggle('navbar--bgColor');
+    }
+  }
+
+  
   ngOnInit(): void {
     this.switchBackgroud();
   }
