@@ -1,0 +1,130 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  min-height: 100vh;
+
+  .title {
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+
+    &__text {
+      margin-top: 10px;
+      font-size: 35px;
+      font-family: "Pattaya", serif;
+      letter-spacing: 2px;
+      color: rgb(0, 80, 120);
+      cursor: default;
+    }
+
+    &__line-right,
+    &__line-left {
+      position: relative;
+      margin: 0 15px;
+      padding: 1px;
+      width: 120px;
+      height: 1px;
+      border-top: 2px solid rgb(0, 80, 120);
+      border-bottom: 2px solid rgb(0, 80, 120);
+
+      &::after,
+      &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 40px;
+        height: 20px;
+      }
+    }
+
+    &__line-right::after {
+      top: 2px;
+      right: 0;
+      background: rgb(250, 250, 250);
+    }
+
+    &__line-left::before {
+      top: 2px;
+      left: 0;
+      background: rgb(250, 250, 250);
+    }
+  }
+
+  &__aboutBox {
+    padding: 3%;
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+.border {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+
+  &__corner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .TL {
+    top: -5px;
+    left: -5px;
+    border-top: 2px solid rgb(0, 80, 120);
+    border-left: 2px solid rgb(0, 80, 120);
+  }
+
+  .TR {
+    top: -5px;
+    right: -5px;
+    border-top: 2px solid rgb(0, 80, 120);
+    border-right: 2px solid rgb(0, 80, 120);
+  }
+
+  .BL {
+    bottom: -5px;
+    left: -5px;
+    border-bottom: 2px solid rgb(0, 80, 120);
+    border-left: 2px solid rgb(0, 80, 120);
+  }
+
+  .BR {
+    bottom: -5px;
+    right: -5px;
+    border-bottom: 2px solid rgb(0, 80, 120);
+    border-right: 2px solid rgb(0, 80, 120);
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.textBox {
+  padding: 15px;
+  color: rgb(0, 60, 90);
+  font-size: 17px;
+  line-height: 23px;
+  text-indent: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    .title {
+      margin-top: 40px;
+    }
+    &__aboutBox {
+      flex-direction: column;
+    }
+  }
+}
