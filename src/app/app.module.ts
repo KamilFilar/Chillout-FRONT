@@ -7,10 +7,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './core/pages/home/home.component';
+import { HomeWelcomeComponent } from './core/pages/home/home-welcome/home-welcome.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    HomeWelcomeComponent
   ],
   imports: [
     BrowserModule,
