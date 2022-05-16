@@ -1,13 +1,33 @@
 .nav-item {
-  a {
+  .item {
     text-decoration: none;
     font-family: "Cambria", serif;
-    font-size: 22px;
-    color: rgb(0, 80, 120);
+    font-size: 23px;
+    color: rgb(210, 240, 255);
     transition: 0.4s;
 
+    &--color {
+      color: rgb(0, 80, 120);
+
+      &:hover {
+        color: rgb(0, 150, 225) !important;
+      }
+    }
+
     &:hover {
-      color: rgb(0, 150, 225);
+      color: rgb(150, 220, 255);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-item {
+    .item {
+      color: rgb(0, 80, 120);
+
+      &:hover {
+        color: rgb(0, 150, 225) !important;
+      }
     }
   }
 }
