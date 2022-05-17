@@ -1,12 +1,15 @@
+@import "/src/styling/variables.scss";
+
 .wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 50px;
+  gap: 20px;
   min-height: 100vh;
 
   .title {
+    margin-top: 20px;
     display: inherit;
     align-items: center;
     justify-content: center;
@@ -55,10 +58,23 @@
 
   &__aboutBox {
     padding: 3%;
-    display: inherit;
+    display: flex;
     align-items: center;
-    justify-content: center;
     gap: 30px;
+
+    .image {
+      width: 450px;
+      height: auto;
+      transition: .3s;
+    }
+    
+    .textBox {
+      padding: 10px;
+      color: rgb(0, 60, 90);
+      font-size: $basicFontSize;
+      line-height: $basicLineHeight;
+      text-indent: $basicTextIndent;
+    }
   }
 }
 
@@ -105,26 +121,36 @@
   }
 }
 
-.image {
-  width: 100%;
-  height: auto;
-}
-
-.textBox {
-  padding: 15px;
-  color: rgb(0, 60, 90);
-  font-size: 17px;
-  line-height: 23px;
-  text-indent: 12px;
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .wrapper {
     .title {
-      margin-top: 40px;
+      margin-top: 30px;
+
+      &__text {
+        font-size: 32px;
+        letter-spacing: 1px;
+      }
+
+      &__line-right,
+      &__line-left {
+        width: 100px;
+      }
     }
+
     &__aboutBox {
       flex-direction: column;
     }
+  }
+
+  .image {
+    max-width: 350px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .image {
+    max-width: 280px;
+    width: 100%;
   }
 }
