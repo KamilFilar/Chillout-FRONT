@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './core/pages/home/home.component';
 import { HomeWelcomeComponent } from './core/pages/home/home-welcome/home-welcome.component';
+import { HomeAboutComponent } from './core/pages/home/home-about/home-about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    HomeWelcomeComponent
+    HomeWelcomeComponent,
+    HomeAboutComponent
   ],
   imports: [
     BrowserModule,
