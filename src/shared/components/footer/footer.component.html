@@ -1,0 +1,19 @@
+<footer class="wrapper">
+  <div class="socialMediaBox">
+    <button class="socialMediaBox__item" *ngFor="let iconName of iconsArr">
+      <fa-icon [icon]="iconName" class="socialMediaBox__item--icon"></fa-icon>
+    </button>
+  </div>
+  <div class="hrefsBox">
+    <a
+      *ngFor="let href of hrefsArr"
+      class="hrefsBox__item"
+      routerLink="{{ href.path }}"
+    >
+      {{ href.name }}
+    </a>
+  </div>
+  <div class="copyrightBox">
+    <p class="copyrightBox__text">© by FilarDev {{ currentYear }}</p>
+  </div>
+</footer>
