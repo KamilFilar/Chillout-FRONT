@@ -10,13 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './core/pages/home/home.component';
 import { HomeWelcomeComponent } from './core/pages/home/home-welcome/home-welcome.component';
 import { HomeAboutComponent } from './core/pages/home/home-about/home-about.component';
+import { HomeBlogComponent } from './core/pages/home/home-blog/home-blog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HomeWelcomeComponent,
-    HomeAboutComponent
+    HomeAboutComponent,
+    HomeBlogComponent
   ],
   imports: [
     BrowserModule,

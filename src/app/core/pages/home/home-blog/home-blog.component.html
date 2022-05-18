@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <div class="textBox">
+    <p class="textBox__text">
+      Lubisz czytać? Ja też lubię, a jeżeli nie lubisz to sprawdź mojego
+      <a href="" class="textBox__text--href">bloga</a> - na pewno dzięki temu
+      znajdziesz swoje nowe hobby. Nie jest to standardowy blog. Jest pisany z
+      weną, pomysłem i konkretnym przekazem.
+    </p>
+    <div class="textBox__lines"></div>
+  </div>
+  <div class="imagesBox">
+    <a *ngFor="let item of imgArr" class="imagesBox__item" routerLink="">
+      <span class="imagesBox__item--text">{{ item }}</span>
+    </a>
+  </div>
+</div>
