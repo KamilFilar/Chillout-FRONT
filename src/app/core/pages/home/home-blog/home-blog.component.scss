@@ -82,19 +82,19 @@
 
     &:nth-child(1) {
       transform: rotate(-5deg);
-      background: url("./../../../../../assets/images/home-blog1.jpg") no-repeat
+      background: url("./../../../../../assets/images/home-blog1.webp") no-repeat
         center center / cover;
     }
 
     &:nth-child(2) {
       transform: rotate(3deg);
-      background: url("./../../../../../assets/images/home-blog2.jpg") no-repeat
+      background: url("./../../../../../assets/images/home-blog2.webp") no-repeat
         center center / cover;
     }
 
     &:nth-child(3) {
       transform: rotate(7deg);
-      background: url("./../../../../../assets/images/home-blog3.jpg") no-repeat
+      background: url("./../../../../../assets/images/home-blog3.webp") no-repeat
         center center / cover;
     }
 
