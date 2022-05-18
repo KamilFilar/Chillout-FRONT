@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class HomeAboutComponent implements OnInit {
 
-  imgPath = './../../../../../assets/images/author-photo.jpg';
+  imgPath = './../../../../../assets/images/author-photo.webp';
 
   constructor() { }
 
