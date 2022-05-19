@@ -1,0 +1,113 @@
+@import "/src/styling/variables.scss";
+
+.wrapper {
+  border: 1px solid red;
+  margin: 100px auto 50px;
+  width: 90%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutBox {
+  width: 90%;
+  display: inherit;
+  flex-direction: column;
+
+  &__photo {
+    margin: 0 auto;
+
+    &--img {
+      max-width: 450px;
+      width: 90%;
+      border-radius: 3px;
+      transition: 0.4s;
+    }
+  }
+
+  &__text {
+    margin: 0 auto;
+    padding: 10px;
+    width: 90%;
+    color: rgb(0, 60, 90);
+    font-size: $basicFontSize;
+    line-height: $basicLineHeight;
+    text-indent: $basicTextIndent;
+  }
+}
+
+.roadBox {
+  width: 90%;
+  border: 1px solid red;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__list > li {
+    position: relative;
+    height: 75px;
+    color: rgb(0, 60, 90);
+    font-size: $basicFontSize;
+    line-height: $basicLineHeight;
+    text-indent: $basicTextIndent;
+    font-style: italic;
+
+    .date {
+      font-weight: bold;
+      font-style: normal;
+      margin: 0 5px;
+    }
+  }
+
+  &__list > li:before {
+    content: "\25CF";
+    color: rgb(0, 100, 150);
+    margin-right: 5px;
+    font-size: 24px;
+  }
+
+  &__list > li:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    border-left: 2px solid rgb(0, 100, 150);
+    margin-left: 21px;
+    height: 100%;
+  }
+
+  &__list > li:first-of-type:after {
+    top: 12%;
+  }
+
+  &__list > li:last-of-type:after {
+    top: -85%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    flex-direction: column;
+    width: 99%;
+  }
+
+  .aboutBox {
+    width: 100%;
+
+    &__photo--img {
+      max-width: 350px;
+    }
+  }
+
+  .roadBox {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .aboutBox__photo--img {
+    max-width: 300px;
+  }
+}
