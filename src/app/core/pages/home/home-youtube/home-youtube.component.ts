@@ -22,7 +22,9 @@ export class HomeYoutubeComponent implements OnInit {
     { name: "250 000 subów", date: "15.05.2023" },
     { name: "1 meetup", date: "01.07.2023" },
     { name: "2 konkurs", date: "06.09.2023" }
-  ]
+  ];
+
+  btnName = "Nasza droga";
 
   constructor() { }
 

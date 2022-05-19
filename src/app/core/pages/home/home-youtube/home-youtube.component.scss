@@ -1,7 +1,6 @@
 @import "/src/styling/variables.scss";
 
 .wrapper {
-  border: 1px solid red;
   margin: 100px auto 50px;
   width: 90%;
   min-height: 100vh;
@@ -39,7 +38,10 @@
 
 .roadBox {
   width: 90%;
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &__list {
     list-style: none;
@@ -89,7 +91,7 @@
 
 @media screen and (max-width: 900px) {
   .wrapper {
-    flex-direction: column;
+    flex-direction: column-reverse;
     width: 99%;
   }
 
@@ -103,6 +105,7 @@
 
   .roadBox {
     width: auto;
+    margin-bottom: 50px;
   }
 }
 

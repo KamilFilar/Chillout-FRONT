@@ -1,9 +1,12 @@
 <div class="wrapper">
   <div class="aboutBox">
     <a href="{{ imgData.href }}" target="_blank" class="aboutBox__photo">
-      <img [src]="imgData.path"  class="aboutBox__photo--img" alt="YouTube image"/>
+      <img
+        [src]="imgData.path"
+        class="aboutBox__photo--img"
+        alt="YouTube image"
+      />
     </a>
-
     <p class="aboutBox__text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit
       sapien orci, ut efficitur nisi interdum eu. Vivamus tincidunt metus lorem,
@@ -18,12 +21,13 @@
   </div>
   <div class="roadBox">
     <ul class="roadBox__list">
-        <li *ngFor="let item of itemArr">
-            {{ item.name }}
-            <span class="date">
-                {{ item.date}}
-            </span>
-        </li>
-      </ul>
+      <li *ngFor="let item of itemArr">
+        {{ item.name }}
+        <span class="date">
+          {{ item.date }}
+        </span>
+      </li>
+    </ul>
+    <app-button [name]="btnName"></app-button>
   </div>
 </div>
