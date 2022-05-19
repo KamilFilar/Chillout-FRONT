@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <div class="aboutBox">
+    <a href="{{ imgData.href }}" target="_blank" class="aboutBox__photo">
+      <img [src]="imgData.path"  class="aboutBox__photo--img" alt="YouTube image"/>
+    </a>
+
+    <p class="aboutBox__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit
+      sapien orci, ut efficitur nisi interdum eu. Vivamus tincidunt metus lorem,
+      a mollis dolor mollis aliquet. Curabitur rhoncus, massa vel aliquet
+      pulvinar, leo quam dapibus velit, ac elementum enim mi a magna. Lorem
+      ipsum dolor sit amet, consectetur adipiscing elit. In nec egestas mi.
+      Morbi lacinia accumsan purus, nec imperdiet eros placerat quis. Maecenas
+      pharetra purus nisi, vel placerat justo tempus viverra. Ut ultricies felis
+      vitae elit congue, a lobortis quam volutpat. Sed luctus neque non purus
+      rutrum molestie.
+    </p>
+  </div>
+  <div class="roadBox">
+    <ul class="roadBox__list">
+        <li *ngFor="let item of itemArr">
+            {{ item.name }}
+            <span class="date">
+                {{ item.date}}
+            </span>
+        </li>
+      </ul>
+  </div>
+</div>
