@@ -1,0 +1,18 @@
+<div class="itemBox">
+  <img [src]="photoPath" class="itemBox__img"/>
+  <p class="itemBox__name">
+    {{ name }}
+  </p>
+  <div class="itemBox__lines"></div>
+  <p class="itemBox__desc">
+    {{ description }}
+  </p>
+  <div class="itemBox__price">
+    <p class="itemBox__price--value">
+      Cena: <span> {{ price }}</span> PLN
+    </p>
+    <button class="itemBox__price__btn">
+        <fa-icon [icon]="faShoppingCart"></fa-icon>
+    </button>
+  </div>
+</div>
