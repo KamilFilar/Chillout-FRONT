@@ -12,6 +12,8 @@ import { HomeWelcomeComponent } from './core/pages/home/home-welcome/home-welcom
 import { HomeAboutComponent } from './core/pages/home/home-about/home-about.component';
 import { HomeBlogComponent } from './core/pages/home/home-blog/home-blog.component';
 import { HomeYoutubeComponent } from './core/pages/home/home-youtube/home-youtube.component';
+import { HomeShopComponent } from './core/pages/home/home-shop/home-shop.component';
+import { CaruselItemComponent } from './core/pages/home/home-shop/carusel-item/carusel-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HomeYoutubeComponent } from './core/pages/home/home-youtube/home-youtub
     HomeWelcomeComponent,
     HomeAboutComponent,
     HomeBlogComponent,
-    HomeYoutubeComponent
+    HomeYoutubeComponent,
+    HomeShopComponent,
+    CaruselItemComponent
   ],
   imports: [
     BrowserModule,

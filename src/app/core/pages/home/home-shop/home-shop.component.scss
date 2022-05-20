@@ -1,0 +1,91 @@
+@import "/src/styling/variables.scss";
+
+.wrapper {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 100vh;
+}
+
+.carusel {
+  width: 99%;
+  margin: 0 0 25px;
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  &__btn {
+    padding: 0;
+    margin: 0 10px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(0, 80, 120);
+    transition: 0.4s;
+
+    &:hover {
+      color: rgb(0, 120, 180);
+      cursor: pointer;
+    }
+  }
+
+  &__slides {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    app-carusel-item:nth-child(1),
+    app-carusel-item:nth-child(3) {
+      transform: scale(0.85);
+      transition: 0.4s;
+
+      &:hover {
+        transform: scale(0.88);
+      }
+    }
+
+    app-carusel-item:nth-child(2) {
+      transform: scale(0.95);
+      transition: 0.4s;
+
+      &:hover {
+        transform: scale(0.98);
+      }
+    }
+  }
+}
+
+.description {
+  width: 50%;
+  color: rgb(0, 60, 90);
+  font-size: $basicFontSize;
+  line-height: $basicLineHeight;
+  text-indent: $basicTextIndent;
+}
+
+@media screen and (max-width: 1000px) {
+  .description {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .carusel {
+
+    &__slides {
+      app-carusel-item:first-child,
+      app-carusel-item:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .description {
+    width: 90%;
+  }
+}
