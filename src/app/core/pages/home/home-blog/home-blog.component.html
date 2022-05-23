@@ -9,8 +9,13 @@
     <div class="textBox__lines"></div>
   </div>
   <div class="imagesBox">
-    <a *ngFor="let item of imgArr" class="imagesBox__item" routerLink="">
-      <span class="imagesBox__item--text">{{ item }}</span>
+    <a
+      *ngFor="let item of imgArray"
+      class="imagesBox__item"
+      [style.background-image]="'url(' + item.path + ')'"
+      routerLink=""
+    >
+      <span class="imagesBox__item--text">{{ item.name }}</span>
     </a>
   </div>
 </div>

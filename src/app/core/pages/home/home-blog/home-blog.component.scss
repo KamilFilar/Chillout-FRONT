@@ -79,23 +79,20 @@
     box-shadow: 1px 1px 5px black;
     transition: 0.4s;
     z-index: 10;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     &:nth-child(1) {
-      transform: rotate(-5deg);
-      background: url("./../../../../../assets/images/home-blog1.webp") no-repeat
-        center center / cover;
+      transform: rotate(-4deg);
     }
 
     &:nth-child(2) {
       transform: rotate(3deg);
-      background: url("./../../../../../assets/images/home-blog2.webp") no-repeat
-        center center / cover;
     }
 
     &:nth-child(3) {
       transform: rotate(7deg);
-      background: url("./../../../../../assets/images/home-blog3.webp") no-repeat
-        center center / cover;
     }
 
     &:hover {
