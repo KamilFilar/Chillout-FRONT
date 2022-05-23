@@ -1,18 +1,19 @@
 <div class="wrapper" id="shop">
   <div class="carusel">
-      <button class="carusel__btn fa-3x" (click)="handlePrevItem()">
-          <fa-icon [icon]="faAngleLeft"></fa-icon>
-      </button>
-      <div class="carusel__slides">
-          <app-carusel-item *ngFor="let item of fakeItemArr | slice:0:3"
-            [photoPath]="item.path"
-            [name]="item.name"
-            [description]="item.desc"
-            [price]="item.price"
-          ></app-carusel-item>
-      </div>
-      <button class="carusel__btn fa-3x" (click)="handleNextItem()">
-        <fa-icon [icon]="faAngleRight"></fa-icon>
+    <button class="carusel__btn fa-3x" (click)="handlePrevItem()">
+      <fa-icon [icon]="faAngleLeft"></fa-icon>
+    </button>
+    <div class="carusel__slides">
+      <app-carusel-item
+        *ngFor="let item of fakeItemArr | slice: 0:3"
+        [photoPath]="item.path"
+        [name]="item.name"
+        [description]="item.desc"
+        [price]="item.price"
+      ></app-carusel-item>
+    </div>
+    <button class="carusel__btn fa-3x" (click)="handleNextItem()">
+      <fa-icon [icon]="faAngleRight"></fa-icon>
     </button>
   </div>
   <p class="description">
