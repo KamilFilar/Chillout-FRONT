@@ -11,13 +11,13 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 export class NavbarComponent implements OnInit {
 
   faBars = faBars;
+  toggleBtnState = false;
   itemsArray = [
     { name: "O mnie", target: "aboutme" },
     { name: "Blog", target: "blog" },
     { name: "Sklep", target: "shop" },
     { name: "YouTube", target: "youtube"}
   ];
-  toggleBtnState = false;
 
   constructor(
     private router: Router

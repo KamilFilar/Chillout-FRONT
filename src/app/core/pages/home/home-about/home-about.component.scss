@@ -43,16 +43,18 @@
       }
     }
 
-    &__line-right::after {
+    &__line-right::after,
+    &__line-left::before {
       top: 2px;
-      right: 0;
       background: rgb(250, 250, 250);
     }
 
+    &__line-right::after {
+      right: 0;
+    }
+
     &__line-left::before {
-      top: 2px;
       left: 0;
-      background: rgb(250, 250, 250);
     }
   }
 
@@ -65,15 +67,18 @@
     .image {
       width: 450px;
       height: auto;
-      transition: .3s;
+      transition: 0.3s;
     }
-    
+
     .textBox {
       padding: 10px;
-      color: rgb(0, 60, 90);
-      font-size: $basicFontSize;
-      line-height: $basicLineHeight;
-      text-indent: $basicTextIndent;
+
+      &--text {
+        color: rgb(0, 60, 90);
+        font-size: $basicFontSize;
+        line-height: $basicLineHeight;
+        text-indent: $basicTextIndent;
+      }
     }
   }
 }

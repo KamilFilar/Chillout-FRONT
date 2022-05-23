@@ -7,13 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class HomeBlogComponent implements OnInit {
-
-  imgArr = [
-    "A po pracy trochę pracy",
-    "Podróże małe i duże",
-    "Wczoraj i jutro"
-  ];
-
+  
   imgArray = [
     {
       name: "A po pracy trochę pracy",
@@ -27,7 +21,7 @@ export class HomeBlogComponent implements OnInit {
       name: "Wczoraj i jutro",
       path: "./../../../../../assets/images/home-blog3.webp"
     }
-  ]
+  ];
 
   constructor() { }
 
