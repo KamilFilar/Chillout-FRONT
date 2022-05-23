@@ -12,10 +12,10 @@ export class NavbarComponent implements OnInit {
 
   faBars = faBars;
   itemsArray = [
-    'O mnie',
-    'Sklep',
-    'Blog',
-    'YouTube'
+    { name: "O mnie", target: "aboutme" },
+    { name: "Blog", target: "blog" },
+    { name: "Sklep", target: "shop" },
+    { name: "YouTube", target: "youtube"}
   ];
   toggleBtnState = false;
 

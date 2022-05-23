@@ -8,7 +8,8 @@
     <div class="navbar__items">
         <app-nav-item
             *ngFor="let item of itemsArray"
-            [text]="item"
+            [text]="item.name"
+            [targetName]="item.target"
         >
         </app-nav-item>
     </div>

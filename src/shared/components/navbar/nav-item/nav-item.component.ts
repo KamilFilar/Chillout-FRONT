@@ -9,6 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class NavItemComponent implements OnInit {
 
   @Input() text!: string;
+  @Input() targetName!: string;
 
   constructor() { }
 
@@ -24,6 +25,11 @@ export class NavItemComponent implements OnInit {
           : listOfItems[i]?.classList.remove('item--color')
       }
     });
+  }
+
+  scrollToItem(target: string) {
+    let el = document.querySelector(`#${target}`);
+    el!.scrollIntoView({behavior: 'smooth'});
   }
 
   ngOnInit(): void {
