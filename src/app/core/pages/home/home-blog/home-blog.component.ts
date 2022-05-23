@@ -14,6 +14,21 @@ export class HomeBlogComponent implements OnInit {
     "Wczoraj i jutro"
   ];
 
+  imgArray = [
+    {
+      name: "A po pracy trochę pracy",
+      path: "./../../../../../assets/images/home-blog1.webp"
+    },
+    {
+      name: "Podróże małe i duże",
+      path: "./../../../../../assets/images/home-blog2.webp"
+    },
+    {
+      name: "Wczoraj i jutro",
+      path: "./../../../../../assets/images/home-blog3.webp"
+    }
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
