@@ -31,7 +31,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/angular-material/custom-theme.scss",
+              "src/app/modules/angular-material/custom-theme.scss",
               "src/styling/styles.scss"
             ],
             "scripts": []
@@ -100,7 +100,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/angular-material/custom-theme.scss",
+              "src/app/modules/angular-material/custom-theme.scss",
               "src/styling/styles.scss"
             ],
             "scripts": []

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { SharedModule } from './../shared/shared.module';
-import { MaterialModule } from './../angular-material/material.module';
+import { SharedModule } from './shared/shared.module';
+import { MaterialModule } from './modules/angular-material/material.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,8 @@ import { HomeBlogComponent } from './core/pages/home/home-blog/home-blog.compone
 import { HomeYoutubeComponent } from './core/pages/home/home-youtube/home-youtube.component';
 import { HomeShopComponent } from './core/pages/home/home-shop/home-shop.component';
 import { CaruselItemComponent } from './core/pages/home/home-shop/carusel-item/carusel-item.component';
+import { BlogComponent } from './modules/blog/blog.component';
+import { ShopComponent } from './modules/shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { CaruselItemComponent } from './core/pages/home/home-shop/carusel-item/c
     HomeBlogComponent,
     HomeYoutubeComponent,
     HomeShopComponent,
-    CaruselItemComponent
+    CaruselItemComponent,
+    BlogComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,
