@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home-youtube',
   templateUrl: './home-youtube.component.html',
   styleUrls: ['./home-youtube.component.scss'],
 })
-
-export class HomeYoutubeComponent implements OnInit {
+export class HomeYoutubeComponent {
+  
   imgData = {
     href: 'https://www.youtube.com/channel/UChHMD9GlKW96pPLso4_DNZg',
     path: './../../../../../assets/images/home-youtube.webp',
@@ -21,10 +21,7 @@ export class HomeYoutubeComponent implements OnInit {
     { name: '1 meetup', date: '01.07.2023' },
     { name: '2 konkurs', date: '06.09.2023' },
   ];
+  btnName: string = 'Nasza droga';
 
-  btnName = 'Nasza droga';
 
-  constructor() {}
-
-  ngOnInit(): void {}
 }

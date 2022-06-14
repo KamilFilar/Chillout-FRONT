@@ -1,17 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { Component } from '@angular/core';
+import { faAngleLeft, faAngleRight, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home-shop',
   templateUrl: './home-shop.component.html',
   styleUrls: ['./home-shop.component.scss'],
 })
-
-export class HomeShopComponent implements OnInit {
+export class HomeShopComponent {
   
-  faAngleLeft = faAngleLeft;
-  faAngleRight = faAngleRight;
-  btnName = 'Pełna oferta';
+  faAngleLeft: IconDefinition = faAngleLeft;
+  faAngleRight: IconDefinition = faAngleRight;
+  btnName: string = 'Pełna oferta';
   fakeItemArr = [
     {
       path: './../../../../../assets/images/example-shirts/example1.jpg',
@@ -45,19 +44,16 @@ export class HomeShopComponent implements OnInit {
     },
   ];
 
-  constructor() {}
-
-  handlePrevItem() {
+  prevItem() {
     const lastItem = this.fakeItemArr.slice(-1).pop();
     this.fakeItemArr.pop(); // remove last item
     this.fakeItemArr.unshift(lastItem!); // add last item to the beginning of an array
   }
 
-  handleNextItem() {
+  nextItem() {
     const firstItem = this.fakeItemArr[0];
     this.fakeItemArr.shift(); // remove first item
     this.fakeItemArr.push(firstItem!); // add first item to the end of array
   }
 
-  ngOnInit(): void {}
 }

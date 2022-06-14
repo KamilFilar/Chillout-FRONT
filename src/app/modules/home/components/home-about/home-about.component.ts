@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 
 export class HomeAboutComponent {
 
-  imgPath = './../../../../../assets/images/author-photo.webp';
+  imgPath: string = './../../../../../assets/images/author-photo.webp';
 }

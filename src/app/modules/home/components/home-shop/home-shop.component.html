@@ -1,6 +1,6 @@
 <div class="wrapper" id="shop">
   <div class="carusel">
-    <button class="carusel__btn fa-3x" (click)="handlePrevItem()">
+    <button class="carusel__btn fa-3x" (click)="prevItem()">
       <fa-icon [icon]="faAngleLeft"></fa-icon>
     </button>
     <div class="carusel__slides">
@@ -12,7 +12,7 @@
         [price]="item.price"
       ></app-carusel-item>
     </div>
-    <button class="carusel__btn fa-3x" (click)="handleNextItem()">
+    <button class="carusel__btn fa-3x" (click)="nextItem()">
       <fa-icon [icon]="faAngleRight"></fa-icon>
     </button>
   </div>

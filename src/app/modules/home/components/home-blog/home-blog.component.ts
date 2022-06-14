@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home-blog',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-blog.component.scss']
 })
 
-export class HomeBlogComponent implements OnInit {
+export class HomeBlogComponent {
   
   imgArray = [
     {
@@ -22,10 +22,5 @@ export class HomeBlogComponent implements OnInit {
       path: "./../../../../../assets/images/home-blog3.webp"
     }
   ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
