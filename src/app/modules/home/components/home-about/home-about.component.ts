@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home-about',
@@ -6,13 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-about.component.scss']
 })
 
-export class HomeAboutComponent implements OnInit {
+export class HomeAboutComponent {
 
   imgPath = './../../../../../assets/images/author-photo.webp';
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
