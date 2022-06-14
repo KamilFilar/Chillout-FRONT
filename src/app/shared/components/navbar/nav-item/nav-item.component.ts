@@ -11,13 +11,20 @@ export class NavItemComponent implements OnInit {
   @Input() text!: string;
   @Input() targetName!: string;
 
-  constructor() { }
+  ngOnInit(): void {
+    this.changeNavItemColor();
+  }
 
-  changeNavItemColor() {
-    const listOfItems = document.querySelectorAll("a");
+  scrollToItem(target: string): void {
+    let el = document.querySelector(`#${target}`);
+    el!.scrollIntoView({behavior: 'smooth'});
+  }
+
+  private changeNavItemColor(): void {
+    const listOfItems: NodeListOf<HTMLAnchorElement> = document.querySelectorAll("a");
 
     window.addEventListener('scroll', () => {
-      let currentHeight = document.documentElement.scrollTop;
+      let currentHeight: number = document.documentElement.scrollTop;
       
       for (let i = 0; i < listOfItems.length; i++) {
         currentHeight != 0 
@@ -25,15 +32,6 @@ export class NavItemComponent implements OnInit {
           : listOfItems[i]?.classList.remove('item--color')
       }
     });
-  }
-
-  scrollToItem(target: string) {
-    let el = document.querySelector(`#${target}`);
-    el!.scrollIntoView({behavior: 'smooth'});
-  }
-
-  ngOnInit(): void {
-    this.changeNavItemColor();
   }
 
 }
